@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Setup\images.zip">
+    <Content Include="Setup\images_peruvian_restaurant.zip">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -1,8 +1,0 @@
-CatalogTypeName,CatalogBrandName,Description,Name,Price,PictureFileName,availablestock,onreorder
-Basket,Puma,SMASH UNISEX - Baskets basses,Puma SMASH UNISEX,37.55,1.png,100,false
-Basket,Lacoste,LEROND - Baskets basses,Lacoste LEROND,80.45,2.png,89,true
-Running,Nike,GIANNIS IMMORTALITY FORCE FIELD - Chaussures de basket,Nike GIANNIS IMMORTALITY FORCE FIELD,79.95,3.png,56,false
-Running,Nike,REVOLUTION 5 - Chaussures de running neutres,Nike REVOLUTION 5,54.95,4.png,120,false
-Botte,Last Studio,BRISBANE - Bottines à lacets,Laste Studio BRISBANE,99.95,5.png,55,false
-Botte,Harley Davidson,HAGERMAN - Bottines à lacets,Harley Davidson HAGERMAN,188.95,6.png,17,false
-Botte,Harley Davidson,DARNEL - Santiags,Harley Davidson DARNEL,219.95,7.png,8,false

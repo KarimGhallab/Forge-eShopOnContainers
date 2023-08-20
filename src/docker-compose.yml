@@ -43,32 +43,6 @@ services:
       - sqldata
       - rabbitmq
 
-  ordering-api:
-    image: ${REGISTRY:-eshop}/ordering.api:${PLATFORM:-linux}-${TAG:-latest}
-    build:
-      context: .
-      dockerfile: Services/Ordering/Ordering.API/Dockerfile
-    depends_on:
-      - sqldata
-      - rabbitmq
-
-  ordering-backgroundtasks:
-    image: ${REGISTRY:-eshop}/ordering.backgroundtasks:${PLATFORM:-linux}-${TAG:-latest}
-    build:
-      context: .
-      dockerfile: Services/Ordering/Ordering.BackgroundTasks/Dockerfile
-    depends_on:
-      - sqldata
-      - rabbitmq
-
-  payment-api:
-    image: ${REGISTRY:-eshop}/payment.api:${PLATFORM:-linux}-${TAG:-latest}
-    build:
-      context: .
-      dockerfile: Services/Payment/Payment.API/Dockerfile
-    depends_on:
-      - rabbitmq
-
   webhooks-api:
     image: ${REGISTRY:-eshop}/webhooks.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
@@ -90,7 +64,6 @@ services:
       - sqldata
       - identity-api
       - rabbitmq
-      - ordering-api
       - catalog-api
       - basket-api
 
@@ -104,21 +77,6 @@ services:
       - sqldata
       - identity-api
       - rabbitmq
-      - ordering-api
-      - catalog-api
-      - basket-api
-
-  ordering-signalrhub:
-    image: ${REGISTRY:-eshop}/ordering.signalrhub:${PLATFORM:-linux}-${TAG:-latest}
-    build:
-      context: .
-      dockerfile: Services/Ordering/Ordering.SignalrHub/Dockerfile
-    depends_on:
-      - nosqldata
-      - sqldata
-      - identity-api
-      - rabbitmq
-      - ordering-api
       - catalog-api
       - basket-api
 

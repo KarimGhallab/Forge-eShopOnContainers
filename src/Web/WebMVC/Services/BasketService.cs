@@ -1,4 +1,4 @@
-﻿using Microsoft.eShopOnContainers.WebMVC.ViewModels;
+using Microsoft.eShopOnContainers.WebMVC.ViewModels;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -91,16 +91,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Services
             return JsonConvert.DeserializeObject<Basket>(jsonResponse);
         }
 
-        public async Task<Order> GetOrderDraft(string basketId)
-        {
-            var uri = API.Purchase.GetOrderDraft(_purchaseUrl, basketId);
-
-            var responseString = await _apiClient.GetStringAsync(uri);
-
-            var response = JsonConvert.DeserializeObject<Order>(responseString);
-
-            return response;
-        }
+        
 
         public async Task AddItemToBasket(ApplicationUser user, int productId)
         {

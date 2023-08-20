@@ -1,4 +1,4 @@
-﻿using Microsoft.eShopOnContainers.WebMVC.ViewModels;
+using Microsoft.eShopOnContainers.WebMVC.ViewModels;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebMVC.Services.ModelDTOs;
@@ -12,6 +12,6 @@ namespace Microsoft.eShopOnContainers.WebMVC.Services
         Task<Basket> UpdateBasket(Basket basket);
         Task Checkout(BasketDTO basket);
         Task<Basket> SetQuantities(ApplicationUser user, Dictionary<string, int> quantities);
-        Task<Order> GetOrderDraft(string basketId);
+        
     }
 }

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -8,26 +8,26 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
-    <None Remove="Setup\CatalogBrands.csv" />
-    <None Remove="Setup\CatalogItems.csv" />
-    <None Remove="Setup\CatalogItems.zip" />
-    <None Remove="Setup\CatalogTypes.csv" />
+    <None Remove="Setup\PeruvianRestaurantCatalogBrands.csv" />
+    <None Remove="Setup\PeruvianRestaurantCatalogItems.csv" />
+    <None Remove="Setup\PeruvianRestaurantCatalogItems.zip" />
+    <None Remove="Setup\PeruvianRestaurantCatalogTypes.csv" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogBrands.csv">
+    <Content Include="Setup\PeruvianRestaurantCatalogBrands.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogItems.csv">
+    <Content Include="Setup\PeruvianRestaurantCatalogItems.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogItems.zip">
+    <Content Include="Setup\PeruvianRestaurantCatalogItems.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogTypes.csv">
+    <Content Include="Setup\PeruvianRestaurantCatalogTypes.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

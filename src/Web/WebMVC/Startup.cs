@@ -1,4 +1,4 @@
-﻿using Devspaces.Support;
+using Devspaces.Support;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -160,10 +160,7 @@ namespace Microsoft.eShopOnContainers.WebMVC
             services.AddHttpClient<ICatalogService, CatalogService>()
                    .AddDevspacesSupport();
 
-            services.AddHttpClient<IOrderingService, OrderingService>()
-                 .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
-                 .AddHttpMessageHandler<HttpClientRequestIdDelegatingHandler>()
-                 .AddDevspacesSupport();
+            
 
 
             //add custom application services
