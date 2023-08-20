@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -8,26 +8,26 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
-    <None Remove="Setup\CatalogBrands.csv" />
-    <None Remove="Setup\CatalogItems.csv" />
-    <None Remove="Setup\CatalogItems.zip" />
-    <None Remove="Setup\CatalogTypes.csv" />
+    <None Remove="Setup\ConsoleCatalogBrands.csv" />
+    <None Remove="Setup\ConsoleCatalogItems.csv" />
+    <None Remove="Setup\ConsoleCatalogItems.zip" />
+    <None Remove="Setup\ConsoleCatalogTypes.csv" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogBrands.csv">
+    <Content Include="Setup\ConsoleCatalogBrands.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogItems.csv">
+    <Content Include="Setup\ConsoleCatalogItems.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogItems.zip">
+    <Content Include="Setup\ConsoleCatalogItems.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Setup\CatalogTypes.csv">
+    <Content Include="Setup\ConsoleCatalogTypes.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

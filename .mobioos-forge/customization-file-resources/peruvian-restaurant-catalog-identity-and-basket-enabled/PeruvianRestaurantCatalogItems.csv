@@ -1,8 +1,0 @@
-CatalogTypeName,CatalogBrandName,Description,Name,Price,PictureFileName,availablestock,onreorder
-Main,Fish,Ceviche,Ceviche,15.5,1.png,100,false
-Main,Beef,Lomo Saltado,Lomo Saltado,12.9,2.png,89,true
-Main,Chicken,Aji de gallina,Aji de gallina,11.5,3.png,56,false
-Entrée,Vegetarian,Tamales,Tamales,6.5,4.png,120,false
-Entrée,Vegetarian,Yucas fritas,Yucas fritas,7.2,5.png,55,false
-Desert,Vegetarian,Tarta tres leches,Tarta tres leches,3.5,6.png,17,false
-Desert,Vegetarian,Picarones,Picarones,4.2,7.png,8,false

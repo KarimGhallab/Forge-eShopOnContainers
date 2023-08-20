@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -72,7 +72,7 @@
     <None Remove="Client\polyfills.ts" />
     <None Remove="Client\test.ts" />
     <None Remove="Client\typings.d.ts" />
-    <Content Include="Setup\images.zip">
+    <Content Include="Setup\images_consoles.zip">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
     <Content Update="appsettings.json;">

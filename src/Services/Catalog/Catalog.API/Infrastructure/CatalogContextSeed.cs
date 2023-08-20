@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopOnContainers.Services.Catalog.API.Infrastructure
+namespace Microsoft.eShopOnContainers.Services.Catalog.API.Infrastructure
 {
   using Extensions.Logging;
   using global::Catalog.API.Extensions;
@@ -67,7 +67,7 @@
 
     private IEnumerable<CatalogBrand> GetCatalogBrandsFromFile(string contentRootPath, ILogger<CatalogContextSeed> logger)
     {
-      string csvFileCatalogBrands = Path.Combine(contentRootPath, "Setup", "CatalogBrands.csv");
+      string csvFileCatalogBrands = Path.Combine(contentRootPath, "Setup", "ConsoleCatalogBrands.csv");
 
       if (!File.Exists(csvFileCatalogBrands))
       {
@@ -122,7 +122,7 @@
 
     private IEnumerable<CatalogType> GetCatalogTypesFromFile(string contentRootPath, ILogger<CatalogContextSeed> logger)
     {
-      string csvFileCatalogTypes = Path.Combine(contentRootPath, "Setup", "CatalogTypes.csv");
+      string csvFileCatalogTypes = Path.Combine(contentRootPath, "Setup", "ConsoleCatalogTypes.csv");
 
       if (!File.Exists(csvFileCatalogTypes))
       {
@@ -176,7 +176,7 @@
 
     private IEnumerable<CatalogItem> GetCatalogItemsFromFile(string contentRootPath, CatalogContext context, ILogger<CatalogContextSeed> logger)
     {
-      string csvFileCatalogItems = Path.Combine(contentRootPath, "Setup", "CatalogItems.csv");
+      string csvFileCatalogItems = Path.Combine(contentRootPath, "Setup", "ConsoleCatalogItems.csv");
 
       if (!File.Exists(csvFileCatalogItems))
       {
@@ -370,7 +370,7 @@
           file.Delete();
         }
 
-        string zipFileCatalogItemPictures = Path.Combine(contentRootPath, "Setup", "CatalogItems.zip");
+        string zipFileCatalogItemPictures = Path.Combine(contentRootPath, "Setup", "ConsoleCatalogItems.zip");
         ZipFile.ExtractToDirectory(zipFileCatalogItemPictures, picturePath);
       }
     }

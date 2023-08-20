@@ -1,4 +1,4 @@
-﻿using Devspaces.Support;
+using Devspaces.Support;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -152,18 +152,12 @@ namespace Microsoft.eShopOnContainers.WebMVC
             services.AddHttpClient("extendedhandlerlifetime").SetHandlerLifetime(TimeSpan.FromMinutes(5)).AddDevspacesSupport();
 
             //add http client services
-            services.AddHttpClient<IBasketService, BasketService>()
-                   .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
-                   .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
-                   .AddDevspacesSupport();
+            
 
             services.AddHttpClient<ICatalogService, CatalogService>()
                    .AddDevspacesSupport();
 
-            services.AddHttpClient<IOrderingService, OrderingService>()
-                 .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
-                 .AddHttpMessageHandler<HttpClientRequestIdDelegatingHandler>()
-                 .AddDevspacesSupport();
+            
 
 
             //add custom application services

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.eShopOnContainers.WebMVC;
 using Microsoft.Extensions.DependencyInjection;
@@ -56,7 +56,7 @@ namespace WebMVC.Infrastructure
     {
       try
       {
-        string imagesZipFile = Path.Combine(contentRootPath, "Setup", "images.zip");
+        string imagesZipFile = Path.Combine(contentRootPath, "Setup", "images_consoles.zip");
         if (!File.Exists(imagesZipFile))
         {
           log.Error("Zip file '{ZipFileName}' does not exists.", imagesZipFile);
