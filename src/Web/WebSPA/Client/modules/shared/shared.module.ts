@@ -16,7 +16,6 @@ import { SignalrService } from './services/signalr.service';
 // Components:
 import { Pager } from './components/pager/pager';
 import { Header } from './components/header/header';
-import { Identity } from './components/identity/identity';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
@@ -37,7 +36,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
     declarations: [
         Pager,
         Header,
-        Identity,
+        
         PageNotFoundComponent,
         UppercasePipe
     ],
@@ -51,7 +50,7 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
         // Providers, Components, directive, pipes
         Pager,
         Header,
-        Identity,
+        
         PageNotFoundComponent,
         UppercasePipe
     ]

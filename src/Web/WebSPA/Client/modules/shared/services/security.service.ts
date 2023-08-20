@@ -1,4 +1,4 @@
-﻿import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders }      from '@angular/common/http';
 import { Observable, Subject }          from 'rxjs';
@@ -61,18 +61,7 @@ export class SecurityService {
         this.IsAuthorized = true;
         this.storage.store('IsAuthorized', true);
 
-        this.getUserData()
-            .subscribe(data => {
-                this.UserData = data;
-                this.storage.store('userData', data);
-                // emit observable
-                this.authenticationSource.next(true);
-                window.location.href = location.origin;
-            },
-            error => this.HandleError(error),
-            () => {
-                console.log(this.UserData);
-            });
+        
     }
 
     public Authorize() {
@@ -147,22 +136,7 @@ export class SecurityService {
         }
     }
 
-    public Logoff() {
-        let authorizationUrl = this.authorityUrl + '/connect/endsession';
-        let id_token_hint = this.storage.retrieve('authorizationDataIdToken');
-        let post_logout_redirect_uri = location.origin + '/';
-
-        let url =
-            authorizationUrl + '?' +
-            'id_token_hint=' + encodeURI(id_token_hint) + '&' +
-            'post_logout_redirect_uri=' + encodeURI(post_logout_redirect_uri);
-
-        this.ResetAuthorizationData();
-
-        // emit observable
-        this.authenticationSource.next(false);
-        window.location.href = url;
-    }
+    
 
     public HandleError(error: any) {
         console.log(error);
@@ -219,16 +193,7 @@ export class SecurityService {
     //    this.storage.setItem(key, JSON.stringify(value));
     //}
 
-    private getUserData = (): Observable<string[]> => {
-        if (this.authorityUrl === '') {
-            this.authorityUrl = this.storage.retrieve('IdentityUrl');
-        }
-
-        const options = this.setHeaders();
-
-        return this._http.get<string[]>(`${this.authorityUrl}/connect/userinfo`, options)
-            .pipe<string[]>((info: any) => info);
-    }
+    
 
     private setHeaders(): any {
         const httpOptions = {

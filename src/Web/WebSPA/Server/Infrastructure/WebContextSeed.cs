@@ -1,4 +1,4 @@
-﻿using eShopOnContainers.WebSPA;
+using eShopOnContainers.WebSPA;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,7 +34,7 @@ namespace WebSPA.Infrastructure
     {
       try
       {
-        string imagesZipFile = Path.Combine(contentRootPath, "Setup", "images.zip");
+        string imagesZipFile = Path.Combine(contentRootPath, "Setup", "images_shoes.zip");
         if (!File.Exists(imagesZipFile))
         {
           log.LogError("Zip file '{ZipFileName}' does not exists.", imagesZipFile);

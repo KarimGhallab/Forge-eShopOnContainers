@@ -1,4 +1,4 @@
-﻿using eShopOnContainers.WebSPA;
+using eShopOnContainers.WebSPA;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
@@ -40,7 +40,7 @@ namespace eShopConContainers.WebSPA
 
             services.AddHealthChecks()
                 .AddCheck("self", () => HealthCheckResult.Healthy())
-                .AddUrlGroup(new Uri(Configuration["IdentityUrlHC"]), name: "identityapi-check", tags: new string[] { "identityapi" });
+                ;
 
             services.Configure<AppSettings>(Configuration);
 
